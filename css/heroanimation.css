@@ -270,9 +270,14 @@ body{
   z-index:5;
 }
 
-@media(max-width:600px){
-  .node-xl{width:54px;height:54px;}
-  .node-lg{width:44px;height:44px;}
-  .node-md{width:36px;height:36px;}
-  .node-sm{width:28px;height:28px;}
+@media(max-width:768px){
+  #stage{
+    display:none;
+  }
+}
+
+@media(max-width:1024px){
+  #stage{
+    display:none;
+  }
 }
