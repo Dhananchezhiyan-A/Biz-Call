@@ -8,7 +8,268 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/products.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/logo2.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+
+  <style>
+    /* ═══ GOOGLE FONTS ═══ */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+    /* ═══ HERO LAYOUT ═══ */
+    .page-hero .container > .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-text-col {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    /* ═══ ANIMATION WRAPPER ═══ */
+    .hero-animation-wrapper {
+      flex: 1;
+      min-width: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      user-select: none;
+      position: relative;
+    }
+
+    /* ═══ BZ ANIMATION ROOT ═══ */
+    .bz-canvas {
+      position: relative;
+      width: 480px;
+      height: 460px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Background SVG */
+    .bz-svg-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* GLOW */
+    .bz-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 210px; height: 210px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,115,232,0.13) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 5;
+      animation: bzGlowPulse 3s ease-in-out infinite;
+    }
+    @keyframes bzGlowPulse {
+      0%,100%{ transform: translate(-50%,-50%) scale(1); opacity: 0.8; }
+      50%    { transform: translate(-50%,-50%) scale(1.35); opacity: 0.4; }
+    }
+
+    /* HUB */
+    .bz-hub {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      width: 114px; height: 114px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #0f4fcf 0%, #1a73e8 50%, #0d3db5 100%);
+      box-shadow: 0 0 0 18px rgba(26,115,232,0.07), 0 0 0 36px rgba(26,115,232,0.03), 0 14px 52px rgba(26,115,232,0.40);
+      display: flex; align-items: center; justify-content: center;
+      animation: bzHubFloat 4s ease-in-out infinite;
+    }
+    .bz-hub::before {
+      content: '';
+      position: absolute; inset: -7px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(99,179,255,0.38);
+      animation: bzRingPulse 2.5s ease-in-out infinite;
+    }
+    .bz-hub::after {
+      content: '';
+      position: absolute; inset: -18px;
+      border-radius: 50%;
+      border: 1px solid rgba(99,179,255,0.18);
+      animation: bzRingPulse 2.5s ease-in-out infinite 0.9s;
+    }
+    .bz-hub img {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: #fff;
+      padding: 5px;
+      object-fit: contain;
+      display: block;
+    }
+    @keyframes bzHubFloat {
+      0%,100%{ transform: translate(-50%,-50%) translateY(0); }
+      50%    { transform: translate(-50%,-50%) translateY(-11px); }
+    }
+    @keyframes bzRingPulse {
+      0%,100%{ opacity: 0.5; transform: scale(1); }
+      50%    { opacity: 1; transform: scale(1.05); }
+    }
+
+    /* ORBIT RINGS */
+    .bz-orbit {
+      position: absolute;
+      top: 50%; left: 50%;
+      border-radius: 50%;
+      border: 1px dashed rgba(99,179,255,0.22);
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    .bz-orbit-1 { width: 194px; height: 194px; animation: bzOrbitSpin 28s linear infinite; }
+    .bz-orbit-2 { width: 310px; height: 310px; animation: bzOrbitSpin 42s linear infinite reverse; }
+    @keyframes bzOrbitSpin {
+      from{ transform: translate(-50%,-50%) rotate(0deg); }
+      to  { transform: translate(-50%,-50%) rotate(360deg); }
+    }
+
+    /* SATELLITE NODES */
+    .bz-sat {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 54px; height: 54px;
+      margin: -27px 0 0 -27px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid rgba(99,179,255,0.25);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 2px;
+      box-shadow: 0 4px 20px rgba(26,115,232,0.13);
+      z-index: 15;
+    }
+    .bz-sat i { font-size: 20px; }
+    .bz-sat span { font-size: 9px; font-weight: 600; letter-spacing: 0.3px; font-family: 'DM Sans', sans-serif; }
+
+    .sat-ai   { animation: bzOrbit1 28s linear infinite; color: #1a73e8; }
+    .sat-wa   { animation: bzOrbit2 28s linear infinite; color: #25d366; }
+    .sat-stats{ animation: bzOrbit3 28s linear infinite; color: #f59e0b; }
+
+    @keyframes bzOrbit1 {
+      from{ transform: rotate(0deg) translateX(97px) rotate(0deg); }
+      to  { transform: rotate(360deg) translateX(97px) rotate(-360deg); }
+    }
+    @keyframes bzOrbit2 {
+      from{ transform: rotate(120deg) translateX(97px) rotate(-120deg); }
+      to  { transform: rotate(480deg) translateX(97px) rotate(-480deg); }
+    }
+    @keyframes bzOrbit3 {
+      from{ transform: rotate(240deg) translateX(97px) rotate(-240deg); }
+      to  { transform: rotate(600deg) translateX(97px) rotate(-600deg); }
+    }
+
+    /* FLOATING CARDS */
+    .bz-card {
+      position: absolute;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid rgba(99,179,255,0.20);
+      box-shadow: 0 8px 40px rgba(26,115,232,0.11), 0 2px 8px rgba(0,0,0,0.06);
+      padding: 15px;
+      font-family: 'DM Sans', sans-serif;
+      z-index: 25;
+    }
+    .bz-card-label {
+      font-size: 9px; font-weight: 600; letter-spacing: 0.8px;
+      text-transform: uppercase; color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    /* CARD POSITIONS + FLOATS */
+    .card-pipeline {
+      left: -12px; top: 36px;
+      width: 170px;
+      animation: bzFloatA 5s ease-in-out infinite;
+    }
+    .card-conv {
+      right: -14px; top: 24px;
+      width: 192px;
+      animation: bzFloatB 4.5s ease-in-out infinite 1.2s;
+    }
+    .card-metrics {
+      left: 6px; bottom: 22px;
+      width: 164px;
+      animation: bzFloatC 5.5s ease-in-out infinite 0.6s;
+    }
+    .card-live {
+      right: 4px; bottom: 18px;
+      width: 170px;
+      animation: bzFloatD 4s ease-in-out infinite 1.8s;
+    }
+
+    @keyframes bzFloatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+    @keyframes bzFloatB { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+    @keyframes bzFloatC { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+    @keyframes bzFloatD { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+    /* PIPELINE CARD */
+    .pipe-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .pipe-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .pipe-dot-g { background: #22c55e; box-shadow: 0 0 6px rgba(34,197,94,0.6); }
+    .pipe-dot-b { background: #3b82f6; box-shadow: 0 0 6px rgba(59,130,246,0.6); }
+    .pipe-dot-o { background: #f59e0b; box-shadow: 0 0 6px rgba(245,158,11,0.6); }
+    .pipe-label { font-size: 11px; color: #1e293b; flex: 1; font-weight: 500; }
+    .pipe-val   { font-size: 11px; font-weight: 700; color: #1a73e8; }
+
+    /* CONVERSATION CARD */
+    .conv-msg { display: flex; gap: 7px; margin-bottom: 7px; }
+    .conv-av  { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 700; flex-shrink: 0; }
+    .av-ai    { background: #dbeafe; color: #1a56db; }
+    .av-u     { background: #d1fae5; color: #065f46; }
+    .conv-bubble { font-size: 10.5px; line-height: 1.4; background: #f1f5f9; border-radius: 8px; padding: 5px 8px; color: #1e293b; }
+    .bz-dots-anim { display: flex; gap: 3px; align-items: center; padding: 6px 8px; background: #f1f5f9; border-radius: 8px; width: fit-content; }
+    @keyframes bzDotBlink { 0%,60%,100%{opacity:0.2} 30%{opacity:1} }
+    .bz-dots-anim span { width: 4px; height: 4px; border-radius: 50%; background: #1a56db; animation: bzDotBlink 1.2s infinite; }
+    .bz-dots-anim span:nth-child(2){ animation-delay: 0.2s; }
+    .bz-dots-anim span:nth-child(3){ animation-delay: 0.4s; }
+    .conv-tags { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+    .ctag      { font-size: 9px; font-weight: 600; padding: 3px 8px; border-radius: 5px; }
+    .ctag-g    { background: #d1fae5; color: #065f46; }
+    .ctag-b    { background: #dbeafe; color: #1a56db; }
+
+    /* METRICS CARD */
+    .metric-big  { font-size: 27px; font-weight: 700; font-family: 'Space Grotesk', sans-serif; color: #1a73e8; line-height: 1; }
+    .metric-sub  { font-size: 9px; color: #94a3b8; margin-bottom: 12px; }
+    .mini-bars   { display: flex; gap: 4px; align-items: flex-end; height: 36px; }
+    @keyframes bzBarGrow { from{transform:scaleY(0)} to{transform:scaleY(1)} }
+    .mbar    { flex: 1; border-radius: 3px 3px 0 0; background: #dbeafe; transform-origin: bottom; animation: bzBarGrow 0.6s ease-out forwards; }
+    .mbar.hi { background: #1a73e8; }
+
+    /* LIVE CALLS CARD */
+    .live-badge    { display: inline-flex; align-items: center; gap: 5px; font-size: 9px; font-weight: 600; color: #ef4444; background: #fee2e2; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; }
+    .live-pulse    { width: 6px; height: 6px; border-radius: 50%; background: #ef4444; animation: bzLivePulse 1s ease-in-out infinite; }
+    @keyframes bzLivePulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
+    .call-row      { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .call-row:last-child { margin-bottom: 0; }
+    .call-ico      { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ci-g          { background: #d1fae5; }
+    .ci-b          { background: #dbeafe; }
+    .call-name     { font-size: 11px; font-weight: 600; color: #1e293b; }
+    .call-type     { font-size: 9px; color: #94a3b8; }
+    .call-dur      { font-size: 10px; color: #94a3b8; margin-left: auto; font-variant-numeric: tabular-nums; }
+    .bz-wv         { display: flex; gap: 2px; align-items: center; height: 14px; }
+    @keyframes bzWaveBar { 0%,100%{height:3px} 50%{height:12px} }
+    .bz-wb         { width: 2px; border-radius: 2px; background: #1a73e8; animation: bzWaveBar 0.7s ease-in-out infinite; }
+    .bz-wb:nth-child(1){ animation-delay:0s }
+    .bz-wb:nth-child(2){ animation-delay:0.12s }
+    .bz-wb:nth-child(3){ animation-delay:0.24s }
+    .bz-wb:nth-child(4){ animation-delay:0.12s }
+
+    @media (max-width: 960px) {
+      .hero-animation-wrapper { display: none; }
+    }
+  </style>
 </head>
 <body data-page="products">
 
@@ -17,16 +278,189 @@
   <!-- ═══ PAGE HERO ═══ -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Products</div><div class="section-tag">
-  8 Enterprise Products
-</div>
-      <h1>Communication Products<br>Built for <span class="grad-text">Enterprise Scale</span></h1>
-      <p>Every product engineered for reliability, AI-first intelligence, and seamless integration. One platform. Zero compromises.</p>
-      <div style="display:flex;gap:16px;margin-top:32px;flex-wrap:wrap">
-        <!-- <a href="pricing.html" class="btn btn-primary btn-lg">Start Free Trial</a> -->
-        <a href="contact.html" class="btn btn-primary">
-  <span>Request Demo</span>
-</a>   </div>
+      <div class="hero-inner">
+
+        <!-- LEFT: hero text -->
+        <div class="hero-text-col">
+          <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Products</div>
+          <div class="section-tag">8 Enterprise Products</div>
+          <h1>Communication Products<br>Built for <span class="grad-text">Enterprise Scale</span></h1>
+          <p>Every product engineered for reliability, AI-first intelligence, and seamless integration. One platform. Zero compromises.</p>
+          <div style="display:flex;gap:16px;margin-top:32px;flex-wrap:wrap">
+            <a href="contact.html" class="btn btn-primary"><span>Request Demo</span></a>
+          </div>
+        </div>
+
+        <!-- RIGHT: New Hero Animation -->
+        <div class="hero-animation-wrapper">
+          <div class="bz-canvas">
+
+            <!-- Background SVG: grid + flow lines + moving dots -->
+            <svg class="bz-svg-bg" viewBox="0 0 480 460" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <radialGradient id="bzBgGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%"   stop-color="rgba(26,115,232,0.07)"/>
+                  <stop offset="100%" stop-color="rgba(26,115,232,0)"/>
+                </radialGradient>
+              </defs>
+              <circle cx="240" cy="230" r="270" fill="url(#bzBgGrad)"/>
+              <!-- grid lines -->
+              <g opacity="0.055" stroke="#3b82f6" stroke-width="0.5">
+                <line x1="0" y1="76"  x2="480" y2="76"/>
+                <line x1="0" y1="152" x2="480" y2="152"/>
+                <line x1="0" y1="228" x2="480" y2="228"/>
+                <line x1="0" y1="304" x2="480" y2="304"/>
+                <line x1="0" y1="380" x2="480" y2="380"/>
+                <line x1="80"  y1="0" x2="80"  y2="460"/>
+                <line x1="160" y1="0" x2="160" y2="460"/>
+                <line x1="240" y1="0" x2="240" y2="460"/>
+                <line x1="320" y1="0" x2="320" y2="460"/>
+                <line x1="400" y1="0" x2="400" y2="460"/>
+              </g>
+              <!-- flow connector paths -->
+              <g fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.16" stroke-dasharray="5,7">
+                <path d="M195 225 Q155 175 108 118"/>
+                <path d="M285 225 Q330 170 372 118"/>
+                <path d="M195 250 Q148 305 108 358"/>
+                <path d="M285 250 Q330 305 372 358"/>
+              </g>
+              <!-- animated dots along paths -->
+              <circle r="3.5" fill="#3b82f6" opacity="0.75">
+                <animateMotion dur="3s" repeatCount="indefinite" path="M195 225 Q155 175 108 118"/>
+              </circle>
+              <circle r="3.5" fill="#3b82f6" opacity="0.75">
+                <animateMotion dur="2.7s" repeatCount="indefinite" begin="0.5s" path="M285 225 Q330 170 372 118"/>
+              </circle>
+              <circle r="3.5" fill="#22c55e" opacity="0.75">
+                <animateMotion dur="3.3s" repeatCount="indefinite" begin="1s" path="M195 250 Q148 305 108 358"/>
+              </circle>
+              <circle r="3.5" fill="#f59e0b" opacity="0.75">
+                <animateMotion dur="2.5s" repeatCount="indefinite" begin="0.7s" path="M285 250 Q330 305 372 358"/>
+              </circle>
+              <!-- extra reverse dots -->
+              <circle r="2.5" fill="#a855f7" opacity="0.55">
+                <animateMotion dur="4s" repeatCount="indefinite" begin="1.5s" path="M108 118 Q155 175 195 225"/>
+              </circle>
+              <circle r="2.5" fill="#ef4444" opacity="0.55">
+                <animateMotion dur="3.8s" repeatCount="indefinite" begin="2s" path="M372 358 Q330 305 285 250"/>
+              </circle>
+            </svg>
+
+            <!-- Glow sphere -->
+            <div class="bz-glow"></div>
+
+            <!-- Orbit rings -->
+            <div class="bz-orbit bz-orbit-1"></div>
+            <div class="bz-orbit bz-orbit-2"></div>
+
+            <!-- Center hub -->
+            <div class="bz-hub">
+              <img src="./images/logo.png" alt="BizCall Logo">
+            </div>
+
+            <!-- Satellite nodes -->
+            <div class="bz-sat sat-ai">
+              <i class="ti ti-brain" aria-hidden="true"></i>
+              <span style="color:#1a73e8">AI</span>
+            </div>
+            <div class="bz-sat sat-wa">
+              <i class="ti ti-message-circle-2" aria-hidden="true"></i>
+              <span style="color:#25d366">WA</span>
+            </div>
+            <div class="bz-sat sat-stats">
+              <i class="ti ti-chart-bar" aria-hidden="true"></i>
+              <span style="color:#f59e0b">Stats</span>
+            </div>
+
+            <!-- Card: Live Pipeline -->
+            <div class="bz-card card-pipeline">
+              <div class="bz-card-label">Live Pipeline</div>
+              <div class="pipe-row">
+                <div class="pipe-dot pipe-dot-g"></div>
+                <span class="pipe-label">AI Voice</span>
+                <span class="pipe-val" id="cnt-ai">847</span>
+              </div>
+              <div class="pipe-row">
+                <div class="pipe-dot pipe-dot-b"></div>
+                <span class="pipe-label">WhatsApp</span>
+                <span class="pipe-val" id="cnt-wa">2.3k</span>
+              </div>
+              <div class="pipe-row">
+                <div class="pipe-dot pipe-dot-o"></div>
+                <span class="pipe-label">IVR Flows</span>
+                <span class="pipe-val" id="cnt-ivr">312</span>
+              </div>
+            </div>
+
+            <!-- Card: AI Conversation -->
+            <div class="bz-card card-conv">
+              <div class="bz-card-label">AI Conversation</div>
+              <div class="conv-msg">
+                <div class="conv-av av-ai">AI</div>
+                <div class="conv-bubble">Policy #BZ2847 due Mar 15. Renew?</div>
+              </div>
+              <div class="conv-msg">
+                <div class="conv-av av-u">U</div>
+                <div class="conv-bubble">Yes, go ahead.</div>
+              </div>
+              <div class="conv-msg">
+                <div class="conv-av av-ai">AI</div>
+                <div class="bz-dots-anim"><span></span><span></span><span></span></div>
+              </div>
+              <div class="conv-tags">
+                <span class="ctag ctag-g">✓ Renewed</span>
+                <span class="ctag ctag-b">WA Sent</span>
+              </div>
+            </div>
+
+            <!-- Card: Metrics -->
+            <div class="bz-card card-metrics">
+              <div class="bz-card-label">This Week</div>
+              <div class="metric-big">94%</div>
+              <div class="metric-sub">CSAT Score · ↑2.3%</div>
+              <div class="mini-bars">
+                <div class="mbar" style="height:55%"></div>
+                <div class="mbar" style="height:70%"></div>
+                <div class="mbar" style="height:62%"></div>
+                <div class="mbar hi" style="height:90%"></div>
+                <div class="mbar" style="height:78%"></div>
+                <div class="mbar" style="height:65%"></div>
+                <div class="mbar" style="height:48%"></div>
+              </div>
+            </div>
+
+            <!-- Card: Live Calls -->
+            <div class="bz-card card-live">
+              <div class="live-badge"><div class="live-pulse"></div>LIVE</div>
+              <div class="call-row">
+                <div class="call-ico ci-g">
+                  <div class="bz-wv">
+                    <div class="bz-wb"></div><div class="bz-wb"></div>
+                    <div class="bz-wb"></div><div class="bz-wb"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="call-name">Priya Sharma</div>
+                  <div class="call-type">Sales · AI Agent</div>
+                </div>
+                <span class="call-dur" id="dur1">2:14</span>
+              </div>
+              <div class="call-row">
+                <div class="call-ico ci-b">
+                  <i class="ti ti-clock" style="font-size:14px;color:#1a73e8"></i>
+                </div>
+                <div>
+                  <div class="call-name">+91 98765…</div>
+                  <div class="call-type">Support · IVR</div>
+                </div>
+                <span class="call-dur" id="dur2">0:42</span>
+              </div>
+            </div>
+
+          </div><!-- /bz-canvas -->
+        </div><!-- /hero-animation-wrapper -->
+
+      </div><!-- /hero-inner -->
     </div>
   </section>
 
@@ -255,7 +689,7 @@
     </div>
   </section>
 
-  <!-- ═══ CRM + WHATSAPP + TEAM CHAT + POWER DIALER (grid) ═══ -->
+  <!-- ═══ CRM + WHATSAPP + TEAM CHAT + POWER DIALER ═══ -->
   <section class="section" id="crm">
     <div class="container">
       <div class="section-header centered" data-reveal>
@@ -318,6 +752,7 @@
           </ul>
           <a href="contact.html" class="btn btn-outline btn-sm" style="margin-top:24px">Start Dialing →</a>
         </div>
+
       </div>
     </div>
   </section>
@@ -354,18 +789,50 @@
   <script src="js/nav.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/utils.js"></script>
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6a0c250af155db1c33ef7be0/1jovn1d6r';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+  <!-- ═══ HERO ANIMATION LOGIC ═══ -->
+  <script>
+    (function () {
+      // Live call timers
+      var s1 = 134, s2 = 42;
+      function fmt(s) { return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); }
+      setInterval(function () {
+        s1++; s2++;
+        var d1 = document.getElementById('dur1');
+        var d2 = document.getElementById('dur2');
+        if (d1) d1.textContent = fmt(s1);
+        if (d2) d2.textContent = fmt(s2);
+      }, 1000);
+
+      // Incrementing pipeline counters
+      var vals = { ai: 847, wa: 2300, ivr: 312 };
+      setInterval(function () {
+        vals.ai  += Math.floor(Math.random() * 3);
+        vals.wa  += Math.floor(Math.random() * 5);
+        vals.ivr += Math.floor(Math.random() * 2);
+        var ca = document.getElementById('cnt-ai');
+        var cw = document.getElementById('cnt-wa');
+        var ci = document.getElementById('cnt-ivr');
+        if (ca) ca.textContent = vals.ai;
+        if (cw) cw.textContent = vals.wa > 999 ? (vals.wa / 1000).toFixed(1) + 'k' : vals.wa;
+        if (ci) ci.textContent = vals.ivr;
+      }, 2200);
+    })();
+  </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6a0c250af155db1c33ef7be0/1jovn1d6r';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
 </body>
 </html>
