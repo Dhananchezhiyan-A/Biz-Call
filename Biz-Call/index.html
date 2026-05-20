@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biz Call — Enterprise Cloud Telephony & AI Voice Platform</title>
+  <meta name="description" content="Enterprise-grade cloud telephony, AI voice agents, predictive dialers, and unified communications. Trusted by 2000+ businesses across India.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/heroanimation.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo2.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script></head>
+</head>
+<body data-page="home">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="section-tag" data-reveal>Enterprise Telecom SaaS Platform</div>
+        <h1 data-reveal data-reveal-delay="1">
+          The Future of<br>
+          <span class="grad-text">Business Telephony</span><br>
+          Is Here
+        </h1>
+        <p data-reveal data-reveal-delay="2">Unify your voice, messaging, and AI automation on one enterprise-grade platform. From cloud PBX to AI voice agents — built for scale, security, and results.</p>
+        <div class="hero-actions" data-reveal data-reveal-delay="3">
+          <a href="contact.html" class="btn btn-outline btn-lg">Book a Demo</a>
+        </div>
+        <div class="trust-bar" data-reveal data-reveal-delay="4">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><polyline points="20 6 9 17 4 12"/></svg>
+            Go live on same day
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ HERO ANIMATION (right side) ═══ -->
+     <div id="stage">
+
+  <!-- SVG layer: connection lines + dot-wave terrain -->
+  <svg id="net-svg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Line gradient -->
+      <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#00C6FF" stop-opacity="0"/>
+        <stop offset="40%"  stop-color="#007BFF" stop-opacity="0.55"/>
+        <stop offset="100%" stop-color="#003FAD" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="lg2" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%"   stop-color="#00C6FF" stop-opacity="0"/>
+        <stop offset="50%"  stop-color="#007BFF" stop-opacity="0.45"/>
+        <stop offset="100%" stop-color="#003FAD" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="glow2">
+        <feGaussianBlur stdDeviation="2" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <!-- Radial for dot glow -->
+      <radialGradient id="dotgrad" cx="50%" cy="50%" r="50%">
+        <stop offset="0%"   stop-color="#007BFF" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#003FAD" stop-opacity="0.6"/>
+      </radialGradient>
+    </defs>
+    <!-- lines injected by JS -->
+  </svg>
+
+  <!-- dot wave canvas at bottom -->
+  <canvas id="dot-wave" style="position:absolute;bottom:0;left:0;width:100%;height:200px;pointer-events:none;z-index:1;"></canvas>
+
+  <!-- ORBIT SYSTEM -->
+  <div id="orbit-wrap">
+
+    <!-- Tilted perspective rings -->
+    <div class="ring ring-outer"  id="ro"></div>
+    <div class="ring ring-mid"    id="rm"></div>
+    <div class="ring ring-inner"  id="ri"></div>
+
+    <!-- Flat equatorial rings -->
+    <div class="ring ring-flat-a" id="rfa"></div>
+    <div class="ring ring-flat-b" id="rfb"></div>
+
+    <!-- Pulse rings -->
+    <div class="pulse" id="p1"></div>
+    <div class="pulse" id="p2"></div>
+    <div class="pulse" id="p3"></div>
+
+    <!-- Platform glow disc -->
+    <div id="platform">
+      <div class="plat-ring" style="width:60%;height:60%;"></div>
+      <div class="plat-ring" style="width:90%;height:90%;opacity:0.5;"></div>
+      <div class="plat-ring" style="width:130%;height:130%;opacity:0.25;"></div>
+    </div>
+
+    <!-- Core orb -->
+    <div id="core">
+      <div id="core-icon">
+        <!-- Phone handset + wifi arcs -->
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <!-- handset -->
+          <path d="M13.2 21.6c2.8 5.6 7.6 10.2 13.2 13.2l4.4-4.4c.5-.5 1.3-.7 2-.4 2.2.8 4.6 1.2 7.2 1.2 1.1 0 2 .9 2 2V40c0 1.1-.9 2-2 2C20.4 42 6 27.6 6 10c0-1.1.9-2 2-2h7c1.1 0 2 .9 2 2 0 2.6.4 5 1.2 7.2.2.7.1 1.4-.4 2L13.2 21.6z"/>
+          <!-- wifi arcs right of phone -->
+          <path d="M33 16a9 9 0 0 1 0 12" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M36.5 12.5a14 14 0 0 1 0 19" stroke="rgba(255,255,255,0.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Voice wave bars under core -->
+    <div id="wave">
+      <div class="wbar" style="height:6px"  id="wb1"></div>
+      <div class="wbar" style="height:14px" id="wb2"></div>
+      <div class="wbar" style="height:22px" id="wb3"></div>
+      <div class="wbar" style="height:10px" id="wb4"></div>
+      <div class="wbar" style="height:26px" id="wb5"></div>
+      <div class="wbar" style="height:8px"  id="wb6"></div>
+      <div class="wbar" style="height:20px" id="wb7"></div>
+      <div class="wbar" style="height:12px" id="wb8"></div>
+      <div class="wbar" style="height:18px" id="wb9"></div>
+      <div class="wbar" style="height:5px"  id="wb10"></div>
+      <div class="wbar" style="height:16px" id="wb11"></div>
+    </div>
+
+    <!-- ── NODES ── -->
+    <!-- Cloud - top left -->
+    <div class="node node-xl" id="nA">
+      <div class="node-glass">
+        <svg viewBox="0 0 24 24"><path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+      </div>
+    </div>
+
+    <!-- AI Bot - bottom left -->
+    <div class="node node-lg" id="nB">
+      <div class="node-glass">
+        <svg viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.38-1 1.73V7h1a7 7 0 0 1 7 7H4a7 7 0 0 1 7-7h1V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2M7 14v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-2H7m-3 4a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3H4m5.5-9a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5m5 0a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5z"/></svg>
+      </div>
+    </div>
+
+    <!-- Wave/Audio - top right -->
+    <div class="node node-xl" id="nC">
+      <div class="node-glass">
+        <!-- soundwave bars icon -->
+        <svg viewBox="0 0 24 24">
+          <rect x="2"  y="8"  width="2.5" height="8"  rx="1.25"/>
+          <rect x="6"  y="5"  width="2.5" height="14" rx="1.25"/>
+          <rect x="10" y="3"  width="2.5" height="18" rx="1.25"/>
+          <rect x="14" y="5"  width="2.5" height="14" rx="1.25"/>
+          <rect x="18" y="8"  width="2.5" height="8"  rx="1.25"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Team/Users - right -->
+    <div class="node node-lg" id="nD">
+      <div class="node-glass">
+        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+      </div>
+    </div>
+
+    <!-- Globe - small, right-mid -->
+    <div class="node node-md" id="nE">
+      <div class="node-glass">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+    </div>
+
+    <!-- Lightning - small bottom right -->
+    <div class="node node-sm" id="nF">
+      <div class="node-glass">
+        <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+      </div>
+    </div>
+
+    <!-- Floating dots (small orbs matching ref image) -->
+    <div class="floatdot" id="fd1" style="width:10px;height:10px;opacity:0.75;box-shadow:0 0 8px rgba(0,123,255,0.7);"></div>
+    <div class="floatdot" id="fd2" style="width:7px;height:7px;opacity:0.55;background:var(--c3);box-shadow:0 0 6px rgba(0,198,255,0.6);"></div>
+    <div class="floatdot" id="fd3" style="width:12px;height:12px;opacity:0.65;box-shadow:0 0 10px rgba(0,123,255,0.7);"></div>
+    <div class="floatdot" id="fd4" style="width:6px;height:6px;opacity:0.50;background:var(--c3);"></div>
+    <div class="floatdot" id="fd5" style="width:9px;height:9px;opacity:0.60;box-shadow:0 0 7px rgba(0,123,255,0.55);"></div>
+    <div class="floatdot" id="fd6" style="width:5px;height:5px;opacity:0.40;background:var(--c3);"></div>
+
+  </div><!-- /orbit-wrap -->
+
+</div><!-- /stage -->
+
+
+    </div>
+  </section>
+
+  <!-- ═══ LOGOS ═══ -->
+  <section class="logos-strip section-sm"> <div class="container"> <p class="logos-label"> Fitted for all business lines </p> <div class="logos-row"> <a href="services.html#financial-services" class="logo-pill finance-pill"> Financial Services </a> <a href="services.html#healthcare" class="logo-pill healthcare-pill"> Healthcare </a> <a href="services.html#education" class="logo-pill education-pill"> Education </a> <a href="services.html#real-estate" class="logo-pill realestate-pill"> Real Estate </a> <a href="services.html#ecommerce" class="logo-pill ecommerce-pill"> E-Commerce </a> <a href="services.html#recruitment" class="logo-pill recruitment-pill"> Recruitment </a> <a href="services.html#market-research" class="logo-pill research-pill"> Market Research </a> <a href="services.html#it-operations" class="logo-pill it-pill"> IT Operations </a> </div> </div> </section>
+
+  <!-- ═══ PRODUCTS OVERVIEW ═══ -->
+  <section class="section" id="products-overview">
+    <div class="container">
+      <div class="section-header centered" data-reveal>
+        <div class="section-tag">Our Product Suite</div>
+        <h2>Everything You Need to<br><span class="grad-text">Run World-Class Communications</span></h2>
+        <p>Eight integrated products. One unified platform. Built for enterprise teams that demand reliability, AI intelligence, and scale.</p>
+      </div>
+      <div class="grid-4" style="margin-top:56px">
+        <a href="products.html#ai-voice" class="card product-card" data-reveal data-reveal-delay="1">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
+          </div>
+          <h4>AI Voice Agent</h4>
+          <p>Handle thousands of simultaneous calls with human-like AI voice conversations.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#cloud-pbx" class="card product-card" data-reveal data-reveal-delay="2">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
+          </div>
+          <h4>Cloud PBX</h4>
+          <p>Enterprise phone system with unlimited extensions, voicemail, and routing.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#smart-ivr" class="card product-card" data-reveal data-reveal-delay="3">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h4>Smart IVR</h4>
+          <p>Multi-level interactive voice menus with NLP and speech recognition built in.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#analytics" class="card product-card" data-reveal data-reveal-delay="4">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h4>Call Analytics</h4>
+          <p>Real-time dashboards, recordings, transcriptions, and AI-powered insights.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#crm" class="card product-card" data-reveal data-reveal-delay="1">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
+          </div>
+          <h4>CRM Integration</h4>
+          <p>Native sync with Salesforce, HubSpot, Zoho, and 40+ CRM platforms.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#whatsapp" class="card product-card" data-reveal data-reveal-delay="2">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h4>WhatsApp API</h4>
+          <p>Official WhatsApp Business API for customer messaging at enterprise scale.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#team-chat" class="card product-card" data-reveal data-reveal-delay="3">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h4>Team Chat</h4>
+          <p>Unified internal messaging, file sharing, and video conferencing for teams.</p>
+          <div class="product-arrow">→</div>
+        </a>
+        <a href="products.html#power-dialer" class="card product-card" data-reveal data-reveal-delay="4">
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Power Dialer</h4>
+          <p>Boost agent productivity 4x with intelligent predictive and preview dialing.</p>
+          <div class="product-arrow">→</div>
+        </a>
+      </div>
+      <div style="text-align:center;margin-top:48px" data-reveal>
+        <a href="products.html" class="btn btn-outline btn-lg">Explore All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY BIZCALL ═══ -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-content" data-reveal>
+          <div class="section-tag">Why Biz Call</div>
+          <h2>Built for Businesses That Can't Afford Downtime</h2>
+          <p>We've architected every layer of our platform — from carrier infrastructure to AI models — for enterprise-grade reliability, compliance, and scale.</p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <strong>Enterprise Security</strong>
+                <p>256-bit AES encryption, SOC 2 Type II, ISO 27001 certified infrastructure.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>99.9% SLA Uptime</strong>
+                <p>Redundant infrastructure across 3 data centers with automatic failover.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <strong>Real-Time Intelligence</strong>
+                <p>AI-powered call scoring, sentiment analysis, and predictive routing.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              </div>
+              <div>
+                <strong>Usage-Based Pricing</strong>
+                <p>Pay only for what you use. Scale from 5 agents to 5,000 without re-contracting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-visual" data-reveal data-reveal-delay="2">
+          <div class="why-panel">
+            <div class="why-panel-header">
+              <span class="why-panel-title">Call Quality Score</span>
+              <span class="badge badge-green">Excellent</span>
+            </div>
+            <div class="quality-score">
+              <div class="quality-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#E2E8F4" stroke-width="10"/>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="url(#scoreGrad)" stroke-width="10"
+                    stroke-dasharray="283" stroke-dashoffset="28" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+                  <defs>
+                    <linearGradient id="scoreGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#003FAD"/>
+                      <stop offset="100%" stop-color="#00C6FF"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="quality-num">4.8</div>
+              </div>
+            </div>
+            <div class="quality-bars">
+              <div class="q-bar-row"><span>Audio Quality</span><div class="q-bar"><div style="width:96%"></div></div><span>96%</span></div>
+              <div class="q-bar-row"><span>Connection Speed</span><div class="q-bar"><div style="width:92%"></div></div><span>92%</span></div>
+              <div class="q-bar-row"><span>Latency</span><div class="q-bar"><div style="width:88%"></div></div><span>88%</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="section-header centered" data-reveal>
+        <div class="section-tag">Customer Stories</div>
+        <h2>Loved by Teams Across India</h2>
+      </div>
+      <div class="grid-3" style="margin-top:48px">
+        <div class="testimonial-card" data-reveal data-reveal-delay="1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Biz Call transformed our sales floor. We went from 200 to 800 connected calls per day with the same team. The AI routing alone paid for itself in a month."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div>
+              <div class="author-name">Rahul Kumar</div>
+              <div class="author-role">VP Sales, FinancePro India</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal data-reveal-delay="2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The IVR builder is incredibly powerful and we had it live in 2 hours. Support team is exceptional — they feel like an extension of our own IT team."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PS</div>
+            <div>
+              <div class="author-name">Priya Sharma</div>
+              <div class="author-role">Head of Operations, EduLearn</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-reveal data-reveal-delay="3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We migrated from a legacy on-prem system and the difference is night and day. Real-time analytics gave us insights we never had before."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AM</div>
+            <div>
+              <div class="author-name">Aditya Mehta</div>
+              <div class="author-role">CTO, RealtyStar Group</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="section">
+    <!-- <div class="cta-section" data-reveal>
+      <div>
+        <div class="section-tag" style="margin:0 auto 20px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.2)">Ready to Transform Your Communications?</div>
+        <p>No credit card required. Full enterprise feature access. Setup in under 30 minutes.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <div id="footer-placeholder"></div>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a0c250af155db1c33ef7be0/1jovn1d6r';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  <script src="js/nav.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/utils.js"></script>
+  <script>
+(function(){
+"use strict";
+
+/* ════════════════════════════════════════════
+   1. DOT-WAVE TERRAIN (canvas at bottom)
+════════════════════════════════════════════ */
+const canvas = document.getElementById('dot-wave');
+const ctx    = canvas.getContext('2d');
+let dw_t = 0;
+
+function resizeCanvas(){
+  canvas.width  = canvas.offsetWidth  * devicePixelRatio;
+  canvas.height = canvas.offsetHeight * devicePixelRatio;
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function drawDotWave(){
+  ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+  const W = canvas.offsetWidth;
+  const H = canvas.offsetHeight;
+  const cols = 60, rows = 12;
+  const xStep = W / (cols - 1);
+  const yBase = H * 0.55;
+
+  for(let r = 0; r < rows; r++){
+    for(let c = 0; c < cols; c++){
+      const xPos = c * xStep;
+      const waveY = Math.sin(c * 0.22 + dw_t + r * 0.4) * (18 - r * 1.2)
+                  + Math.sin(c * 0.11 + dw_t * 0.7) * 8;
+      const yPos = yBase + r * (H * 0.04) + waveY;
+      const alpha = 0.45 - r * 0.03;
+      const size  = 1.8 - r * 0.08;
+      if(size < 0.5 || alpha < 0.05) continue;
+      ctx.beginPath();
+      ctx.arc(xPos, yPos, Math.max(size, 0.5), 0, Math.PI*2);
+      ctx.fillStyle = `rgba(0,100,210,${alpha.toFixed(2)})`;
+      ctx.fill();
+    }
+  }
+  dw_t += 0.012;
+  requestAnimationFrame(drawDotWave);
+}
+drawDotWave();
+
+/* ════════════════════════════════════════════
+   2. NODE POSITIONS — fixed (like the image)
+   Reference: Cloud TL, Bot BL, Wave TR, Users R, Globe R-mid, Lightning BR
+════════════════════════════════════════════ */
+const wrap = document.getElementById('orbit-wrap');
+
+const nodeDefs = [
+  { id:'nA', ox:-0.46, oy:-0.40 },  // Cloud – top-left
+  { id:'nB', ox:-0.45, oy: 0.35 },  // Bot  – bottom-left
+  { id:'nC', ox: 0.42, oy:-0.50 },  // Wave – top-right
+  { id:'nD', ox: 0.52, oy: 0.28 },  // Users – right
+  { id:'nE', ox: 0.36, oy:-0.10 },  // Globe – right-mid
+  { id:'nF', ox: 0.26, oy: 0.52 },  // Lightning – bottom-right
+];
+
+// Float-dot positions (scattered, matching ref image small dots)
+const dotDefs = [
+  { id:'fd1', ox:-0.28, oy:-0.62 },
+  { id:'fd2', ox: 0.60, oy:-0.28 },
+  { id:'fd3', ox: 0.68, oy: 0.10 },
+  { id:'fd4', ox:-0.18, oy: 0.62 },
+  { id:'fd5', ox: 0.18, oy: 0.68 },
+  { id:'fd6', ox:-0.60, oy: 0.05 },
+];
+
+function placeEl(id, ox, oy){
+  const el = document.getElementById(id);
+  const hw = wrap.offsetWidth / 2;
+  gsap.set(el, {
+    position:'absolute',
+    top:'50%', left:'50%',
+    xPercent:-50, yPercent:-50,
+    x: ox * hw,
+    y: oy * hw,
+  });
+  return el;
+}
+
+const nodeEls = nodeDefs.map(d => ({ el:placeEl(d.id, d.ox, d.oy), ...d }));
+const dotEls  = dotDefs.map(d  => ({ el:placeEl(d.id, d.ox, d.oy), ...d }));
+
+/* ════════════════════════════════════════════
+   3. SVG CONNECTION LINES
+════════════════════════════════════════════ */
+const svg = document.getElementById('net-svg');
+
+function makeLine(grad){
+  const l = document.createElementNS('http://www.w3.org/2000/svg','line');
+  l.setAttribute('stroke', `url(#${grad})`);
+  l.setAttribute('stroke-width','1.2');
+  l.setAttribute('filter','url(#glow2)');
+  svg.appendChild(l);
+  return l;
+}
+
+// Core → each node + cross connections
+const coreLines = nodeEls.map((_,i) => makeLine(i%2===0?'lg1':'lg2'));
+const extraPairs = [[0,2],[1,3],[0,5],[2,4]];
+const extraLines = extraPairs.map(() => makeLine('lg1'));
+
+function center(el){
+  const r  = el.getBoundingClientRect();
+  const sr = svg.getBoundingClientRect();
+  return { x: r.left+r.width/2-sr.left, y: r.top+r.height/2-sr.top };
+}
+
+function updateLines(){
+  const cc = center(document.getElementById('core'));
+  nodeEls.forEach(({el},i)=>{
+    const nc = center(el);
+    const l  = coreLines[i];
+    l.setAttribute('x1',cc.x); l.setAttribute('y1',cc.y);
+    l.setAttribute('x2',nc.x); l.setAttribute('y2',nc.y);
+  });
+  extraPairs.forEach(([a,b],i)=>{
+    const ac = center(nodeEls[a].el);
+    const bc = center(nodeEls[b].el);
+    const l  = extraLines[i];
+    l.setAttribute('x1',ac.x); l.setAttribute('y1',ac.y);
+    l.setAttribute('x2',bc.x); l.setAttribute('y2',bc.y);
+  });
+}
+
+/* ════════════════════════════════════════════
+   4. GSAP ANIMATIONS
+════════════════════════════════════════════ */
+
+/* 4-a  Tilted rings slow rotation */
+gsap.to('#ro',{rotation: 360, duration:55, ease:'none', repeat:-1, transformOrigin:'center center'});
+gsap.to('#rm',{rotation:-360, duration:40, ease:'none', repeat:-1, transformOrigin:'center center'});
+gsap.to('#ri',{rotation: 360, duration:25, ease:'none', repeat:-1, transformOrigin:'center center'});
+gsap.to('#rfa',{rotation:-360,duration:32, ease:'none', repeat:-1, transformOrigin:'center center'});
+gsap.to('#rfb',{rotation: 360,duration:50, ease:'none', repeat:-1, transformOrigin:'center center'});
+
+/* 4-b  Core pulse glow */
+const coreGlowA = '0 0 0 10px rgba(0,123,255,0.12),0 0 0 22px rgba(0,123,255,0.07),0 0 70px rgba(0,150,255,0.55),0 0 110px rgba(0,100,220,0.28),inset 0 -8px 24px rgba(0,20,80,0.40),inset 0 4px 12px rgba(255,255,255,0.15)';
+const coreGlowB = '0 0 0 16px rgba(0,123,255,0.06),0 0 0 35px rgba(0,123,255,0.03),0 0 40px rgba(0,150,255,0.28),0 0 60px rgba(0,100,220,0.12),inset 0 -8px 24px rgba(0,20,80,0.40),inset 0 4px 12px rgba(255,255,255,0.15)';
+gsap.to('#core',{ boxShadow:coreGlowB, duration:2.6, ease:'sine.inOut', repeat:-1, yoyo:true });
+gsap.to('#core',{ scale:1.035, duration:3.0, ease:'sine.inOut', repeat:-1, yoyo:true });
+
+/* 4-c  Core float */
+gsap.to('#core',{ y:'-=14', duration:3.8, ease:'sine.inOut', repeat:-1, yoyo:true });
+
+/* 4-d  Expanding pulse rings */
+function doPulse(id, delay){
+  const tl = gsap.timeline({ repeat:-1, delay });
+  tl.fromTo(id,
+    { scale:0.9, opacity:0.7, width:'26%', height:'26%' },
+    { scale:5.5, opacity:0,   duration:3.4, ease:'power1.out' }
+  );
+}
+doPulse('#p1', 0);
+doPulse('#p2', 1.1);
+doPulse('#p3', 2.3);
+
+/* 4-e  Voice wave bars */
+['#wb1','#wb2','#wb3','#wb4','#wb5','#wb6','#wb7','#wb8','#wb9','#wb10','#wb11']
+.forEach((b,i)=>{
+  gsap.to(b,{
+    scaleY: ()=> 0.15 + Math.random()*1.8,
+    duration: 0.2 + Math.random()*0.25,
+    ease:'power1.inOut',
+    repeat:-1, yoyo:true,
+    delay: i*0.05,
+  });
+});
+
+/* 4-f  Platform glow pulse */
+gsap.to('#platform',{
+  opacity:0.5, scale:1.08,
+  duration:2.4, ease:'sine.inOut', repeat:-1, yoyo:true,
+});
+
+/* 4-g  Platform ripples */
+document.querySelectorAll('.plat-ring').forEach((r,i)=>{
+  gsap.to(r, {
+    opacity:0, scale:1.5,
+    duration:2.4, ease:'power1.out',
+    repeat:-1, delay: i*0.8,
+  });
+});
+
+/* 4-h  Node float — each bobs independently */
+nodeEls.forEach(({el},i)=>{
+  gsap.to(el,{
+    y:`+=${-(8 + i*2)}`,
+    duration: 2.4 + i*0.35,
+    ease:'sine.inOut', repeat:-1, yoyo:true, delay: i*0.4,
+  });
+  const g = el.querySelector('.node-glass');
+  gsap.to(g,{
+    boxShadow:`0 6px 34px rgba(0,100,220,0.32),0 0 0 8px rgba(0,123,255,0.11),inset 0 1px 4px rgba(255,255,255,0.6)`,
+    duration:2.0+i*0.2, ease:'sine.inOut', repeat:-1, yoyo:true, delay:i*0.2,
+  });
+});
+
+/* 4-i  Float dots gentle drift */
+dotEls.forEach(({el},i)=>{
+  gsap.to(el,{
+    y:`+=${(Math.random()-0.5)*18}`,
+    x:`+=${(Math.random()-0.5)*12}`,
+    opacity: 0.3 + Math.random()*0.45,
+    duration: 3 + Math.random()*4,
+    ease:'sine.inOut', repeat:-1, yoyo:true, delay:i*0.5,
+  });
+});
+
+/* 4-j  Line opacity pulse */
+[...coreLines,...extraLines].forEach((l,i)=>{
+  gsap.fromTo(l,
+    { attr:{'stroke-opacity':0.0} },
+    { attr:{'stroke-opacity':0.12+Math.random()*0.32},
+      duration:1.8+Math.random()*1.5,
+      ease:'sine.inOut', repeat:-1, yoyo:true, delay:i*0.18 }
+  );
+});
+
+/* 4-k  Entry reveal */
+gsap.from(['#ro','#rm','#ri','#rfa','#rfb'],{
+  opacity:0, scale:0.6,
+  duration:1.4, ease:'power3.out', stagger:0.1, delay:0.1,
+});
+gsap.from('#core',{
+  scale:0, opacity:0,
+  duration:1.2, ease:'back.out(1.6)', delay:0.3,
+});
+gsap.from(nodeEls.map(n=>n.el),{
+  scale:0, opacity:0,
+  duration:1.0, ease:'back.out(1.4)', stagger:0.12, delay:0.55,
+});
+gsap.from(dotEls.map(d=>d.el),{
+  scale:0, opacity:0,
+  duration:0.8, ease:'back.out(2)', stagger:0.08, delay:0.8,
+});
+
+/* ════════════════════════════════════════════
+   5. RAF LINE UPDATE + MOUSE PARALLAX
+════════════════════════════════════════════ */
+let mx=0, my=0, tx=0, ty=0;
+document.addEventListener('mousemove', e=>{
+  const cx=window.innerWidth/2, cy=window.innerHeight/2;
+  tx=(e.clientX-cx)/cx;
+  ty=(e.clientY-cy)/cy;
+});
+
+(function raf(){
+  mx += (tx-mx)*0.06;
+  my += (ty-my)*0.06;
+  gsap.set('#orbit-wrap',{ x:mx*20, y:my*14 });
+  updateLines();
+  requestAnimationFrame(raf);
+})();
+
+/* Resize */
+window.addEventListener('resize',()=>{
+  const hw = wrap.offsetWidth/2;
+  nodeDefs.forEach(({id,ox,oy})=>{
+    gsap.set(document.getElementById(id),{ x:ox*hw, y:oy*hw });
+  });
+  dotDefs.forEach(({id,ox,oy})=>{
+    gsap.set(document.getElementById(id),{ x:ox*hw, y:oy*hw });
+  });
+});
+
+})();
+</script>
+</body>
+</html>

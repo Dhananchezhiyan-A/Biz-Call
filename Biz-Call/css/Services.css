@@ -1,0 +1,439 @@
+/* ============================================================
+   BIZ CALL CTI SOLUTIONS — Services Page CSS
+   ============================================================ */
+
+/* ─── Services Tab Navigation ─── */
+.services-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.services-tab-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 6px;
+  flex-wrap: wrap;
+}
+
+.stab {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gray);
+  text-align: center;
+  white-space: nowrap;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.stab:hover {
+  color: var(--primary);
+  background: rgba(0, 123, 255, 0.06);
+}
+
+.stab.active {
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ─── Tab Panels ─── */
+.stab-panels {
+  margin-top: 28px;
+}
+
+.stab-panel {
+  display: none;
+}
+
+.stab-panel.active {
+  display: block;
+  animation: panelFadeIn 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stab-panel-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 56px 56px;
+  box-shadow: var(--shadow-sm);
+}
+
+.stab-content h3 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+
+.stab-content > p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+/* ─── Service Stat Cards ─── */
+.stab-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.service-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-stat-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--grad-primary);
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.service-stat-card:hover {
+  border-color: rgba(0, 123, 255, 0.25);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.service-stat-card:hover::before {
+  opacity: 1;
+}
+
+.ssc-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 123, 255, 0.08);
+  border-radius: var(--radius-md);
+}
+
+.ssc-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ssc-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.ssc-label {
+  font-size: 0.85rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+/* ─── Dialer Visual ─── */
+.dialer-visual {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dv-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.85rem;
+}
+
+.dv-row > span {
+  width: 140px;
+  flex-shrink: 0;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.dv-row > strong {
+  width: 40px;
+  flex-shrink: 0;
+  text-align: right;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.dv-bar {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.dv-bar > div {
+  height: 100%;
+  background: var(--grad-primary);
+  border-radius: 100px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Industries Grid ─── */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.industry-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.industry-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-primary);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.industry-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.industry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.industry-card:hover::after {
+  opacity: 1;
+}
+
+.industry-card:hover h4,
+.industry-card:hover p {
+  color: var(--white);
+}
+
+.industry-card:hover .tag-chip {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.industry-icon {
+  font-size: 2.4rem;
+  margin-bottom: 18px;
+  display: block;
+  line-height: 1;
+  transition: transform var(--transition);
+}
+
+.industry-card:hover .industry-icon {
+  transform: scale(1.15);
+}
+
+.industry-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--navy);
+  transition: color var(--transition);
+}
+
+.industry-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  transition: color var(--transition);
+}
+
+.industry-card .tag-chips {
+  margin-top: 0;
+}
+
+/* ─── Operations Cards (inherits .card from global) ─── */
+.card h4 {
+  margin-bottom: 12px;
+}
+
+.card .btn {
+  align-self: flex-start;
+}
+
+/* ─── Section Scroll Target Offset ─── */
+#virtual-phone,
+#predictive,
+#call-center,
+#voice-broadcast,
+#virtual-numbers,
+#operations,
+#industries,
+#it,
+#real-estate,
+#finance,
+#education,
+#recruitment,
+#market-research {
+  scroll-margin-top: calc(var(--nav-h) + 32px);
+}
+
+/* ─── Auto Dialer / Sales highlight strips ─── */
+.ops-highlight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0, 123, 255, 0.05);
+  border: 1px solid rgba(0, 123, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.ops-highlight-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ops-highlight-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ops-highlight-text strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.ops-highlight-text span {
+  font-size: 0.82rem;
+  color: var(--gray);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .stab-panel-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 36px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-tab-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .services-tab-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stab {
+    flex: none;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stab-panel-inner {
+    padding: 28px 24px;
+  }
+
+  .dv-row > span {
+    width: 110px;
+  }
+
+  .service-stat-card {
+    padding: 20px;
+  }
+
+  .ssc-num {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-tab-nav {
+    padding: 4px;
+  }
+
+  .stab {
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+}

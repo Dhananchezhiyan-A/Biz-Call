@@ -1,0 +1,547 @@
+/* ============================================================
+   BIZ CALL SOLUTIONS — FINAL WORKING NAV.CSS
+   ============================================================ */
+
+:root{
+  --nav-h:88px;
+  --white:#fff;
+  --navy:#0b2a52;
+  --primary:#003fad;
+  --gray:#64748b;
+  --border:#e2e8f0;
+  --surface:#f8fafc;
+  --transition:.3s ease;
+}
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+
+  height:var(--nav-h);
+
+  background:#fff;
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+    0 1px 0 rgba(0,63,173,.08),
+    0 4px 24px rgba(0,63,173,.08);
+
+  transition:all .3s ease;
+}
+
+header.scrolled{
+  background:rgba(255,255,255,.96);
+}
+
+/* ============================================================
+   NAV INNER
+   ============================================================ */
+
+.nav-inner{
+  max-width:1240px;
+  margin:0 auto;
+
+  height:var(--nav-h);
+
+  display:flex;
+  align-items:center;
+
+  gap:32px;
+
+  padding:0 24px;
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.nav-logo{
+  display:flex;
+  align-items:center;
+
+  margin-right:auto;
+}
+
+.nav-logo img,
+.bizcall-logo{
+  height: 130px;
+  width:auto;
+  max-width:220px;
+
+  object-fit:contain;
+  display:block;
+}
+
+/* ============================================================
+   DESKTOP NAV
+   ============================================================ */
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.nav-item{
+  position:relative;
+}
+
+/* FIX DROPDOWN CLOSE ISSUE */
+
+.nav-item:not(:hover) .mega-dropdown:not(:hover){
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+
+  transform:translateX(-50%) translateY(-8px);
+}
+
+.nav-link{
+  display:flex;
+  align-items:center;
+  gap:5px;
+
+  padding:10px 14px;
+
+  border-radius:10px;
+
+  font-size:.92rem;
+  font-weight:600;
+
+  color:var(--navy);
+
+  cursor:pointer;
+
+  white-space:nowrap;
+
+  transition:all .25s ease;
+}
+
+.nav-link svg{
+  width:14px;
+  height:14px;
+}
+
+.nav-item:hover .nav-link{
+  background:rgba(0,63,173,.07);
+}
+
+/* ============================================================
+   DROPDOWN
+   ============================================================ */
+
+.mega-dropdown{
+  position:absolute;
+
+  top:calc(100% + 12px);
+  left:50%;
+
+  transform:translateX(-50%) translateY(-8px);
+
+  background:#fff;
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  min-width:640px;
+
+  padding:28px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+
+  transition:all .25s ease;
+
+  z-index:9999;
+}
+
+/* FIXED OPEN/CLOSE */
+
+.nav-item:hover .mega-dropdown,
+.nav-item .mega-dropdown:hover{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+
+  transform:translateX(-50%) translateY(0);
+}
+
+.mega-dropdown-sm{
+  min-width:240px;
+}
+
+.mega-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+
+.mega-heading{
+  font-size:.72rem;
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  color:var(--gray);
+
+  margin-bottom:12px;
+}
+
+.mega-link{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  text-decoration:none;
+
+  transition:all .25s ease;
+
+  color:var(--navy);
+}
+
+.mega-link-icon,
+.mega-link-icon svg {
+  transition: all .25s ease;
+}
+
+.mega-link:hover .mega-link-icon {
+  background: linear-gradient(135deg, #003fad, #007bff);
+}
+
+.mega-link:hover .mega-link-icon svg {
+  color: #fff;
+  stroke: #fff;
+}
+
+.mega-link-icon{
+  width:40px;
+  height:40px;
+
+  border-radius:10px;
+
+  background:rgba(0,63,173,.08);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+.mega-link-icon svg{
+  width:18px;
+  height:18px;
+}
+
+.mega-link-text strong{
+  display:block;
+  font-size:.88rem;
+}
+
+.mega-link-text span{
+  display:block;
+  font-size:.78rem;
+  color:var(--gray);
+}
+
+.mega-divider{
+  height:1px;
+  background:var(--border);
+  margin:18px 0;
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.nav-actions .btn{
+  height:44px;
+
+  padding:0 18px;
+
+  border-radius:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+}
+
+/* ============================================================
+   HAMBURGER
+   ============================================================ */
+
+.hamburger{
+  display:none;
+
+  width:40px;
+  height:40px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:rgba(0,63,173,.08);
+
+  cursor:pointer;
+
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+
+  gap:5px;
+}
+
+.hamburger span{
+  width:18px;
+  height:2px;
+
+  background:var(--navy);
+
+  border-radius:2px;
+
+  transition:.3s;
+}
+
+.hamburger.open span:nth-child(1){
+  transform:translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.open span:nth-child(3){
+  transform:translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================================
+   MOBILE NAV
+   ============================================================ */
+
+.mobile-nav{
+  position:fixed;
+
+  top:var(--nav-h);
+  left:0;
+  right:0;
+  bottom:0;
+
+  background:#fff;
+
+  z-index:999;
+
+  overflow-y:auto;
+
+  transform:translateX(100%);
+
+  transition:transform .3s ease;
+
+  padding:20px;
+}
+
+.mobile-nav.open{
+  transform:translateX(0);
+}
+
+.mobile-nav-item{
+  border-bottom:1px solid var(--border);
+}
+
+.mobile-nav-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 0;
+
+  font-size:1rem;
+  font-weight:600;
+
+  color:var(--navy);
+
+  cursor:pointer;
+}
+
+.mobile-nav-link svg{
+  transition:.3s ease;
+}
+
+.mobile-nav-link.open svg{
+  transform:rotate(90deg);
+}
+
+.mobile-nav-actions{
+  margin-top:30px;
+  padding-top:12px;
+}
+
+/* IMPORTANT FIX */
+
+.mobile-sub-nav{
+  max-height:0;
+  overflow:hidden;
+
+  transition:max-height .35s ease;
+
+  padding-left:14px;
+
+  position:relative;
+  z-index:9999;
+}
+
+.mobile-sub-nav.open{
+  max-height:1000px;
+}
+
+.mobile-sub-link{
+  display:block;
+
+  padding:12px 0;
+
+  font-size:.92rem;
+
+  color:var(--gray);
+
+  text-decoration:none;
+
+  position:relative;
+  z-index:9999;
+
+  pointer-events:auto;
+}
+
+.mobile-sub-link:hover{
+  color:var(--primary);
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media(max-width:1024px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .hamburger{
+    display:flex;
+    order:99; /* FIX: always renders after action buttons */
+  }
+
+  .nav-actions{
+    display:flex; /* FIX: explicit display prevents collapse */
+    gap:6px;
+    margin-left:auto;
+  }
+
+  .nav-actions .btn{
+    height:36px;
+    padding:0 10px;
+    font-size:.72rem;
+    display:flex;
+  }
+
+  .nav-logo img,
+  .bizcall-logo{
+    height:52px;
+    max-width:180px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media(max-width:768px){
+
+  :root{
+    --nav-h:74px;
+  }
+
+  .nav-inner{
+    padding:0 12px;
+    gap:10px;
+  }
+
+  .nav-logo img,
+  .bizcall-logo{
+    height:50px;
+    max-width:160px;
+  }
+
+  .nav-actions{
+    gap:6px;
+  }
+
+  .nav-actions .btn{
+    height:34px;
+    padding:0 10px;
+    /* FIX: removed duplicate font-size:.72rem (same as 1024px block) */
+  }
+
+  .hamburger{
+    width:34px;
+    height:34px;
+  }
+
+  .mobile-nav{
+    padding:18px 14px;
+    top:74px; /* FIX: hardcoded fallback for Safari 14 */
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media(max-width:480px){
+
+  .nav-logo img,
+  .bizcall-logo{
+    height:46px;
+    max-width:150px;
+  }
+
+  .nav-actions .btn{
+    font-size:.68rem;
+    padding:0 8px;
+  }
+}

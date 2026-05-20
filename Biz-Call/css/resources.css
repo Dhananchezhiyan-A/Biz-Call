@@ -1,0 +1,360 @@
+/* ============================================================
+   BIZ CALL SOLUTIONS — Resources Page CSS
+   ============================================================ */
+
+/* ─── Blog Featured ─── */
+.blog-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.blog-featured::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad-primary);
+}
+.blog-featured-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.blog-img-placeholder {
+  background: var(--grad-primary);
+  border-radius: var(--radius-lg);
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.blog-img-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.12) 0%, transparent 60%);
+}
+.blog-img-large {
+  height: 280px;
+}
+.blog-img-icon {
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+}
+.blog-featured-content h3 {
+  font-size: 1.4rem;
+  margin: 12px 0;
+  line-height: 1.3;
+}
+.blog-featured-content p {
+  font-size: .95rem;
+}
+
+/* ─── Blog Meta ─── */
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.blog-cat {
+  background: rgba(0,123,255,.1);
+  color: var(--primary);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.blog-date, .blog-read {
+  font-size: .8rem;
+  color: var(--gray);
+}
+
+/* ─── Blog Grid ─── */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.blog-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.blog-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: rgba(0,123,255,.2);
+}
+.blog-card .blog-img-placeholder {
+  height: 160px;
+  border-radius: 0;
+}
+.blog-img-icon {
+  font-size: 3rem;
+}
+.blog-card-body {
+  padding: 24px;
+}
+.blog-card h4 {
+  font-size: .98rem;
+  margin: 8px 0 10px;
+  line-height: 1.4;
+}
+.blog-card p {
+  font-size: .86rem;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.blog-readmore {
+  font-family: var(--font-display);
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: gap var(--transition);
+}
+.blog-readmore:hover {
+  color: var(--deep-blue);
+}
+
+/* ─── Case Studies ─── */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.case-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.case-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad-primary);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.case-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+.case-card:hover::before {
+  opacity: 1;
+}
+.case-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.case-company-logo {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--grad-primary);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800; font-size: 1rem;
+  flex-shrink: 0;
+}
+.case-company {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .92rem;
+  color: var(--navy);
+}
+.case-industry {
+  font-size: .78rem;
+  color: var(--gray);
+  margin-top: 2px;
+}
+.case-card h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.case-card p {
+  font-size: .88rem;
+  line-height: 1.65;
+}
+.case-stats {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-top: 20px;
+}
+.cs-stat {
+  flex: 1;
+  text-align: center;
+  padding: 12px 8px;
+  border-right: 1px solid var(--border);
+}
+.cs-stat:last-child { border-right: none; }
+.cs-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.cs-stat span:last-child {
+  font-size: .72rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+/* ─── Webinars ─── */
+.webinars-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 24px;
+}
+.webinar-card {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: all var(--transition);
+}
+.webinar-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.webinar-live {
+  background: var(--navy);
+  border-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.webinar-live::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 90% 20%, rgba(0,123,255,.4) 0%, transparent 60%);
+}
+.webinar-live > * { position: relative; z-index: 1; }
+.webinar-live h4 { color: white; }
+.webinar-live p { color: rgba(255,255,255,.7); }
+.webinar-live .webinar-meta { color: rgba(255,255,255,.6); }
+.webinar-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #10b981;
+  margin-bottom: 12px;
+}
+.wstatus-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse-dot 2s ease infinite;
+}
+.webinar-status-recorded {
+  color: var(--gray);
+}
+.webinar-card h4 {
+  font-size: .98rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+.webinar-card p {
+  font-size: .86rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.webinar-meta {
+  display: flex;
+  gap: 14px;
+  font-size: .8rem;
+  color: var(--gray);
+  flex-wrap: wrap;
+}
+
+/* ─── FAQ Cols ─── */
+.faq-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.faq-col {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; gap: 16px;
+  font-family: var(--font-display);
+  font-size: .9rem; font-weight: 600;
+  color: var(--navy); cursor: pointer;
+  transition: background var(--transition);
+}
+.faq-q svg { flex-shrink: 0; color: var(--gray); transition: transform var(--transition); }
+.faq-q:hover { background: rgba(0,123,255,.03); }
+.faq-item.open .faq-q { color: var(--primary); background: rgba(0,123,255,.04); }
+.faq-item.open .faq-q svg { transform: rotate(180deg); color: var(--primary); }
+.faq-a {
+  display: none;
+  padding: 0 24px 20px;
+  font-size: .88rem;
+  color: var(--gray);
+  line-height: 1.75;
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ─── Testimonials Wall ─── */
+.testimonials-wall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.twall-col { display: flex; flex-direction: column; }
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .blog-featured { grid-template-columns: 1fr; gap: 32px; }
+  .blog-grid { grid-template-columns: 1fr 1fr; }
+  .cases-grid { grid-template-columns: 1fr; max-width: 600px; margin: 56px auto 0; }
+  .webinars-grid { grid-template-columns: 1fr; }
+  .faq-cols { grid-template-columns: 1fr; }
+  .testimonials-wall { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .blog-featured { padding: 28px 24px; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .cases-grid { margin-top: 40px; }
+}

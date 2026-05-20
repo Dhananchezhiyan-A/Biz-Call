@@ -1,0 +1,278 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --c1:#003FAD;
+  --c2:#007BFF;
+  --c3:#00C6FF;
+  --navy:#0A2540;
+  --bg:#EEF3FF;
+}
+
+html,
+body{
+  width:100%;
+  min-height:100%;
+  background:var(--bg);
+
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+/* ── stage fills viewport ── */
+#stage{
+  position:relative;
+  width:100%;height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+
+/* ─── BACKGROUND: subtle radial light ─── */
+#stage::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 60% 45%, rgba(0,123,255,0.13) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 75% 30%, rgba(0,198,255,0.10) 0%, transparent 60%);
+  pointer-events:none;
+}
+
+/* ─── WAVY TERRAIN at the bottom ─── */
+#terrain{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:220px;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+/* ─── DOT WAVE GRID at bottom ─── */
+#dot-wave{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:180px;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+/* ─── CANVAS for SVG lines ─── */
+#net-svg{
+  position:absolute;
+  inset:0;width:100%;height:100%;
+  pointer-events:none;
+  overflow:visible;
+  z-index:2;
+}
+
+/* ─── ORBIT SYSTEM ─── */
+#orbit-wrap{
+  position:relative;
+  width:min(560px,88vw);
+  height:min(560px,88vw);
+  flex-shrink:0;
+  z-index:3;
+}
+
+/* ─── Elliptical / tilted rings ─── */
+.ring{
+  position:absolute;
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+
+/* Ring style: very faint blue-white border + soft glow */
+.ring-outer{
+  width:100%;height:68%;
+  border:1px solid rgba(120,170,255,0.30);
+  box-shadow:0 0 18px rgba(0,123,255,0.07) inset,
+             0 0 12px rgba(0,198,255,0.08);
+  transform:translate(-50%,-50%) rotateX(55deg) rotateZ(-15deg);
+  will-change:transform;
+}
+.ring-mid{
+  width:76%;height:52%;
+  border:1px solid rgba(120,170,255,0.35);
+  box-shadow:0 0 10px rgba(0,198,255,0.08) inset;
+  transform:translate(-50%,-50%) rotateX(55deg) rotateZ(-15deg);
+  will-change:transform;
+}
+.ring-inner{
+  width:52%;height:36%;
+  border:1px solid rgba(100,160,255,0.45);
+  transform:translate(-50%,-50%) rotateX(55deg) rotateZ(-15deg);
+  will-change:transform;
+}
+
+/* Flat rings (around equator) */
+.ring-flat-a{
+  width:60%;height:60%;
+  border:1.5px solid rgba(0,123,255,0.18);
+  transform:translate(-50%,-50%);
+  will-change:transform;
+}
+.ring-flat-b{
+  width:85%;height:85%;
+  border:1px solid rgba(0,123,255,0.10);
+  transform:translate(-50%,-50%);
+  will-change:transform;
+}
+
+/* ─── CORE ORB ─── */
+#core{
+  position:absolute;
+  width:26%;height:26%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  /* layered radial: bright sky-blue highlight → rich mid blue → deep navy */
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.55) 0%, transparent 35%),
+    radial-gradient(circle at 40% 35%, #4FC3FF 0%, #007BFF 40%, #003FAD 75%, #001F6B 100%);
+  box-shadow:
+    0 0 0 10px rgba(0,123,255,0.10),
+    0 0 0 22px rgba(0,123,255,0.06),
+    0 0 50px rgba(0,150,255,0.45),
+    0 0 90px rgba(0,100,220,0.25),
+    inset 0 -8px 24px rgba(0,20,80,0.40),
+    inset 0 4px 12px rgba(255,255,255,0.15);
+  will-change:transform,box-shadow;
+  z-index:10;
+}
+
+/* phone handset icon inside core */
+#core-icon{
+  position:absolute;
+  inset:0;
+  display:flex;align-items:center;justify-content:center;
+}
+#core-icon svg{
+  width:42%;height:42%;
+  fill:rgba(255,255,255,0.95);
+  filter:drop-shadow(0 0 8px rgba(255,255,255,0.7));
+}
+
+/* signal arcs around phone */
+#signal-arcs{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:120%;height:120%;
+  pointer-events:none;
+}
+
+/* ─── PLATFORM BASE (glowing disc at bottom) ─── */
+#platform{
+  position:absolute;
+  bottom:8%;left:50%;
+  transform:translateX(-50%);
+  width:38%;height:6%;
+  border-radius:50%;
+  background:radial-gradient(ellipse at 50% 50%,
+    rgba(0,198,255,0.55) 0%,
+    rgba(0,123,255,0.20) 40%,
+    transparent 70%);
+  filter:blur(6px);
+  will-change:transform,opacity;
+  z-index:1;
+}
+
+/* concentric platform ripples */
+.plat-ring{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(0,198,255,0.35);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%) scaleX(3) scaleY(0.55);
+  will-change:opacity,transform;
+}
+
+/* ─── NODES ─── */
+.node{
+  position:absolute;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  will-change:transform;
+  z-index:8;
+}
+.node-glass{
+  border-radius:50%;
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  /* layered glass: perimeter ring + inner glow */
+  background:
+    radial-gradient(circle at 38% 32%, rgba(255,255,255,0.80) 0%, rgba(200,225,255,0.45) 50%, rgba(100,170,255,0.20) 100%);
+  border:1.5px solid rgba(255,255,255,0.85);
+  box-shadow:
+    0 4px 28px rgba(0,100,220,0.22),
+    0 0 0 5px rgba(0,123,255,0.09),
+    inset 0 1px 4px rgba(255,255,255,0.6);
+  backdrop-filter:blur(14px);
+}
+.node-glass svg{
+  fill:var(--c1);
+  width:44%;height:44%;
+  filter:drop-shadow(0 0 4px rgba(0,100,255,0.45));
+}
+
+/* node sizes */
+.node-xl{width:74px;height:74px;}
+.node-lg{width:62px;height:62px;}
+.node-md{width:50px;height:50px;}
+.node-sm{width:38px;height:38px;}
+
+/* tiny floating dots scattered around */
+.floatdot{
+  position:absolute;
+  border-radius:50%;
+  background:var(--c2);
+  will-change:transform,opacity;
+  pointer-events:none;
+  z-index:7;
+}
+
+/* ─── PARTICLES ─── */
+.particle{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+  will-change:transform,opacity;
+  z-index:6;
+}
+
+/* ─── VOICE WAVE (under core) ─── */
+#wave{
+  position:absolute;
+  bottom:14%;left:50%;
+  transform:translateX(-50%);
+  display:flex;align-items:center;gap:3px;
+  height:30px;
+  z-index:9;
+}
+.wbar{
+  width:2.5px;border-radius:10px;
+  background:linear-gradient(to top, rgba(0,63,173,0.7), rgba(0,198,255,0.9));
+  box-shadow:0 0 5px rgba(0,198,255,0.5);
+  will-change:transform;
+  transform-origin:bottom center;
+}
+
+/* ─── EXPAND PULSE from core ─── */
+.pulse{
+  position:absolute;
+  top:50%;left:50%;
+  border-radius:50%;
+  border:1.5px solid rgba(0,198,255,0.6);
+  transform:translate(-50%,-50%) scale(0);
+  opacity:0;
+  width:26%;height:26%;
+  pointer-events:none;
+  z-index:5;
+}
+
+@media(max-width:600px){
+  .node-xl{width:54px;height:54px;}
+  .node-lg{width:44px;height:44px;}
+  .node-md{width:36px;height:36px;}
+  .node-sm{width:28px;height:28px;}
+}
